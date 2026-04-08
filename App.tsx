@@ -1,18 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
-function CaixaRed(){
-  return <View style={{height:100, width:100, backgroundColor:"#ff0000"}}></View>
-}
-
-function CaixaBlue(){
-  return <View style={{height:100, width:100, backgroundColor:"#163cf7d9"}}></View>
-}
 
 export default function App() {
   return (
     <View style={styles.container}>
       
+      <Text style={styles.text}>Flexbox</Text>
+      <Text style={styles.text}> ➡️➡️ </Text>
+     
       <StatusBar style="auto" />
     </View>
   );
@@ -21,10 +17,21 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    flexDirection: "column",
+    backgroundColor: '#63edd6',
     alignItems: 'center',
+    flexWrap: "wrap",
     justifyContent: 'center',
-    borderColor: "#6f00d1",
-    borderWidth: 8,
+    borderColor: "#f0f772",
+    borderWidth: 12,
+    borderRadius: 50,
   },
+  text: {
+    fontSize: 30,
+    fontWeight: "bold",
+    backgroundColor: "#fbf989",
+    padding: 15,
+    borderRadius: 50, 
+    marginBottom: 10,
+  }
 });
